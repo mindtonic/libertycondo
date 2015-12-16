@@ -1,0 +1,31 @@
+---
+- image: 1.jpg
+  alt: The Front of the Building
+- image: 2.jpg
+  alt: The Back of the Building
+- image: 3.jpg
+  alt: The Back Door
+- image: 5.jpg
+  alt: Bedroom Alcove
+- image: 17.jpg
+  alt: Bedroom and Bathroom
+- image: 6.jpg
+  alt: Door to Back Porch
+- image: 7.jpg
+  alt: Kitchen
+- image: 8.jpg
+  alt: Front Yard
+- image: 9.jpg
+  alt: Front Porch
+- image: 10.jpg
+  alt: Parking Lot
+- image: 11.jpg
+  alt: Living Room Windows with Curtains
+- image: 13.jpg
+  alt: Living Room Looking Towards Kitchen and Bedroom
+- image: 14.jpg
+  alt: Front Door
+- image: 15.jpg
+  alt: Front Door with Living Room Windows
+- image: 16.jpg
+  alt: Living Room

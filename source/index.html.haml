@@ -1,0 +1,57 @@
+---
+title: Liberty Street Condo For Rent | 1 Bedroom Rental in Asheville, NC
+---
+
+%h1.holder North Asheville: One Bedroom Apartment for Rent
+
+.container
+  #slides
+    - data.images.each_with_index do |image, index|
+      %img{src: image_path(image[:image]), alt: image[:alt], id: "image-#{index + 1}"}
+  .slide-description
+
+.holder
+  %p Cozy one bedroom ground level apartment in a beautiful historic North Asheville neighborhood. Old World charm with modern conveniences in a quiet wooded neighborhood. Walking distance to Downtown, Greenlife, Trader Joe's, Harris Teeter, Asheville Yoga Center, and all of the hip new restaurants on Charlotte street. This space is perfect for an individual or a couple. A small pet would be considered.
+
+  %p The living room has several large south facing windows for plenty of natural light. The bedroom has reading lights, a ceiling fan, and a full length mirror.
+
+  %p The apartment is in a beautiful brick building built in the 1920's. The front yard is wooded, while the back of the house provides ample off-street parking. There is a coin operated washer and dryer in the basement. There is access to the public bus line, but being less than 1 mile from the city center, it is very easy to walk or ride a bicycle to most of the major interest areas or UNC Asheville.
+
+  %p $985 per month with a one month security deposit, references, and credit check.
+
+  %p Please note: the apartment is available immediately, however I will only be available to show it on Monday, December 21st. If you are interested and would like to see it, please #{link_to "Make A Reservation", "http://doodle.com/poll/zeziayd43rregnmh", target: "_blank"}, and bring with you a completed #{link_to "Application Form", image_path('application.pdf')}.
+
+  %p If you have any further questions, please email me at #{mail_to "libertycondo3@gmail.com"}.
+
+
+:javascript
+  function set_text(number) {
+    text = $('#image-'+number).attr('alt');
+    $('.slide-description').html(text);
+  }
+
+  $(function() {
+    $('#slides').slidesjs({
+      width: 940,
+      height: 528,
+      play: {
+        active: true,
+        auto: true,
+        interval: 4000,
+        swap: true,
+        pauseOnHover: true,
+        restartDelay: 2500
+      },
+      callback: {
+        loaded: function(number) {
+          set_text(number);
+        },
+        start: function(number) {
+          set_text(number);
+        },
+        complete: function(number) {
+          set_text(number);
+        }
+      }
+    });
+  });

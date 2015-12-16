@@ -1,67 +1,187 @@
 @charset "utf-8";
 @import "normalize";
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700);
+
+$font-family: 'Noto Sans', sans-serif;
 
 body {
-  background: #ECC561;
-  text-align: center;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #DDDDDD;
+  text-align: left;
+  font-family: $font-family;
   font-size: 1em;
-}
+  background: url(image_url('front.jpg'));
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 50px;
 
-.logo img {
-  height: 18.75em;
-  margin-top: 6em;
-}
+  main {
+    h1 {
+      font-family: $font-family;
+      font-weight: 400;
+      margin: 10px 0;
 
-h1 {
-  color: rgba(0,0,0,0.5);
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.8em;
-  font-weight: 400;
-  margin: 0;
-}
+      @media (max-width:939px) {
+        font-size: 1.3em;
+      }
 
-.doc {
-  margin: 3em 0;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.1em;
-  font-weight: 300;
-
-  a {
-    border: 1px solid white;
-    border-radius: 3px;
-    padding: 0.75em 0.7em;
-    color: white;
-    text-decoration: none;
-    transition: color 0.1s linear;
-    &:hover {
-      background: rgba(0,0,0,0.2);
-      color: white;
-      transition: all 0.15s linear;
+      @media (min-width:940px) {
+        font-size: 1.8em;
+      }
     }
   }
 }
 
-.welcome {
-  -webkit-animation-name: welcome;
-  -webkit-animation-duration: .9s;
+.holder {
+  max-width: 940px;
+  margin: 0 auto;
 }
 
-@-webkit-keyframes welcome {
-  from {
-    -webkit-transform: scale(0);
-    opacity: 0;
+.slide-description {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+p {
+  max-width: 940px;
+  margin-bottom: 0 auto 20px;
+}
+
+#slides {
+  display: none
+}
+
+#slides .slidesjs-navigation {
+  margin-top:5px;
+}
+
+a.slidesjs-next,
+a.slidesjs-previous,
+a.slidesjs-play,
+a.slidesjs-stop {
+  background-image: url(image_path('btns-next-prev.png'));
+  background-repeat: no-repeat;
+  display:block;
+  width:12px;
+  height:18px;
+  overflow: hidden;
+  text-indent: -9999px;
+  float: left;
+  margin-right:5px;
+}
+
+a.slidesjs-next {
+  margin-right:10px;
+  background-position: -12px 0;
+}
+
+a:hover.slidesjs-next {
+  background-position: -12px -18px;
+}
+
+a.slidesjs-previous {
+  background-position: 0 0;
+}
+
+a:hover.slidesjs-previous {
+  background-position: 0 -18px;
+}
+
+a.slidesjs-play {
+  width:15px;
+  background-position: -25px 0;
+}
+
+a:hover.slidesjs-play {
+  background-position: -25px -18px;
+}
+
+a.slidesjs-stop {
+  width:18px;
+  background-position: -41px 0;
+}
+
+a:hover.slidesjs-stop {
+  background-position: -41px -18px;
+}
+
+.slidesjs-pagination {
+  margin: 7px 0 0;
+  float: right;
+  list-style: none;
+}
+
+.slidesjs-pagination li {
+  float: left;
+  margin: 0 1px;
+}
+
+.slidesjs-pagination li a {
+  display: block;
+  width: 13px;
+  height: 0;
+  padding-top: 13px;
+  background-image: url(image_path('pagination.png'));
+  background-position: 0 0;
+  float: left;
+  overflow: hidden;
+}
+
+.slidesjs-pagination li a.active,
+.slidesjs-pagination li a:hover.active {
+  background-position: 0 -13px
+}
+
+.slidesjs-pagination li a:hover {
+  background-position: 0 -26px
+}
+
+#slides a:link,
+#slides a:visited {
+  color: #333
+}
+
+#slides a:hover,
+#slides a:active {
+  color: #9e2020
+}
+
+.navbar {
+  overflow: hidden
+}
+
+.container {
+  margin: 0 auto
+}
+
+/* For tablets & smart phones */
+@media (max-width: 767px) {
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
   }
-  50% {
-   -webkit-transform: scale(0);
-   opacity: 0;
+  .container {
+    width: auto
   }
-  82.5% {
-    -webkit-transform: scale(1.03);
-    -webkit-animation-timing-function: ease-out;
-    opacity: 1;
+}
+
+/* For smartphones */
+@media (max-width: 480px) {
+  .container {
+    width: auto
   }
-  to {
-    -webkit-transform: scale(1);
+}
+
+/* For smaller displays like laptops */
+@media (min-width: 768px) and (max-width: 939px) {
+  .container {
+    width: 724px
+  }
+}
+
+/* For larger displays */
+@media (min-width:940px) {
+  .container {
+    width: 940px
   }
 }

@@ -1,0 +1,14 @@
+<!doctype html>
+%html
+  %head
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+    %meta{:charset => "utf-8"}
+    %meta{:content => "width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no", :name => "viewport"}
+    %title= current_page.data.title || "Liberty Street Condo For Rent | 1 Bedroom Rental in Asheville, NC"
+    = stylesheet_link_tag :site
+    %script{:src => "https://code.jquery.com/jquery-2.1.4.min.js"}
+    = javascript_include_tag :all
+  %body{:class => page_classes}
+    %header
+    %main= yield
+    %footer
