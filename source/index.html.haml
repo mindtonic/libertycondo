@@ -2,7 +2,7 @@
 title: Liberty Street Condo For Rent | 1 Bedroom Rental in Asheville, NC
 ---
 
-%h1.holder North Asheville: One Bedroom Apartment for Rent
+%h1 North Asheville: One Bedroom Apartment for Rent
 
 .container
   #slides
@@ -21,8 +21,17 @@ title: Liberty Street Condo For Rent | 1 Bedroom Rental in Asheville, NC
 
   %p Please note: the apartment is available immediately, however I will only be available to show it on Monday, December 21st. If you are interested and would like to see it, please #{link_to "Make A Reservation", "http://doodle.com/poll/zeziayd43rregnmh", target: "_blank"}, and bring with you a completed #{link_to "Application Form", image_path('application.pdf')}.
 
-  %p If you have any further questions, please email me at #{mail_to "libertycondo3@gmail.com", "libertycondo3@gmail.com"}.
+  %p If you have any further questions, please email #{mail_to "libertycondo3@gmail.com", "libertycondo3@gmail.com"}.
 
+  %p
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.8373168918592!2d-82.55314568476774!3d35.60707934164259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8859f4a56192e0a7%3A0x860a5dc3415f7151!2s109+N+Liberty+St%2C+Asheville%2C+NC+28801!5e0!3m2!1sen!2sus!4v1450370082378" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+  %p.quicklinks
+    Quick Links:
+  %ul.quicklinks
+    %li= link_to "Make A Reservation", "http://doodle.com/poll/zeziayd43rregnmh", target: "_blank"
+    %li= link_to "Application Form", image_path('application.pdf'), target: "_blank"
+    %li= mail_to "libertycondo3@gmail.com", "libertycondo3@gmail.com"
 
 :javascript
   function set_text(number) {
